@@ -1,0 +1,350 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vino Krishna - Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+header:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 0.5rem;
+}
+
+nav a {
+  color: #ff7f00;
+  text-decoration: none;
+  font-size: 1.125rem;  
+  text-shadow: 0 0 5px #ff7f00;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px; /* Adjust this value based on your header height */
+}
+
+main section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h2 {
+  font-size: 4rem; /* Increased font size */
+  margin: 2rem 0 3rem; /* Adjusted margins */
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+  text-align: center;
+}
+
+@keyframes heading-in {
+  to {
+    transform: translateY(0);  
+    opacity: 1;
+  }
+}
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; /* Increased gap for more space between items */
+  padding: 3rem;
+  width: 100%;
+  max-width: 1400px; /* Increased max-width to allow for larger images */
+  margin: 0 auto;
+  justify-items: center;
+  align-items: start;
+}
+
+.portfolio-item {
+  width: 100%;
+  max-width: 400px; /* Increased from 300px to 400px */
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Enhanced shadow for larger items */
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+
+
+@keyframes portfolio-item-in {
+  from { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.item-info {
+  position: absolute;
+  bottom: 100%;
+  left: auto;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  transition: bottom 0.5s;
+}
+
+.portfolio-item:hover .item-info {
+  bottom: 0;
+}
+
+.item-info h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #ffffff; /* Bright white for high contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Dark shadow for depth */
+}
+
+.item-info p {
+  color: #e0e0e0; /* Light grey for good contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio {
+    grid-template-columns: 1fr;
+  }
+}
+
+button {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  margin-top: 1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@keyframes social-icons-in {
+  to {
+    opacity: 1; 
+  }
+}
+
+.social-icon {  
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+  background-color: #fff; /* Added background color */
+  border-radius: 50%; /* Make the background color circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: scale(1.2) translateY(-5px);
+}
+
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>  
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3cfbff,
+    backgroundColor: 0x0,
+    points: 10.00,
+    maxDistance: 23.00,
+    spacing: 19.00  
+  })
+});
+</script>
+</head>
+<body>
+  
+<div id="vanta-bg"></div>
+
+<header>
+  <h1>Vinod Krishna</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>      
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>  
+</header>
+
+<main>
+  <h2>Landscapes</h2>
+  <section id="portfolio">
+    
+    
+
+    <div class="portfolio-item">
+      <a href="https://ibb.co/KqPBzLp"><img src="https://i.ibb.co/VS1bpQc/Comfy-UI-00302.png" alt="Comfy-UI-00302" border="0"></a>
+      <div class="item-info">
+        <h3>Slum Area</h3>
+        <p>Dreone shot of Slum area.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/sFb3YQB"><img src="https://i.ibb.co/dQjKY6h/Comfy-UI-00290.png" alt="Comfy-UI-00290" border="0"></a>
+      <div class="item-info">
+        <h3>Clean River</h3>
+        <p>a Beautiful river in a forest.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/B3N3ZvD"><img src="https://i.ibb.co/MS6SVKT/Comfy-UI-00301.png" alt="Comfy-UI-00301" border="0"></a>
+      <div class="item-info">
+        <h3>Country side</h3>
+        <p>Country side before rain.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/19J2YYn"><img src="https://i.ibb.co/wKr6ZZL/Comfy-UI-00298.png" alt="Comfy-UI-00298" border="0"></a>
+      <div class="item-info">
+        <h3>Ultra Long-Range</h3>
+        <p>Ultra Long-Range Shot of a hill.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/DzxQKJh"><img src="https://i.ibb.co/MZY7Nvr/Comfy-UI-00296.png" alt="Comfy-UI-00296" border="0"></a>
+      <div class="item-info">
+        <h3>Desert view</h3>
+        <p>Long range shot of a Desert</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/s2b3Ryz"><img src="https://i.ibb.co/XbjJLSM/Comfy-UI-00294.png" alt="Comfy-UI-00294" border="0"></a>
+      <div class="item-info">
+        <h3>Cabin in a forest</h3>
+        <p>A beautiful picture of cabin in a forest.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="social-icons">
+    <a href="https://www.instagram.com/b_vinod_krishna?igsh=dGtraTE2a3plcHdt" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram icon" class="social-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/vinod-krishna-banda/" target="_blank">  
+      <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn icon" class="social-icon">
+    </a>
+    <a href="https://github.com/vinodkrishnabanda" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub icon" class="social-icon">  
+    </a>
+  </div>
+
+</main>
+</body>
+</html>

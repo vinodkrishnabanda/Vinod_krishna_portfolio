@@ -1,0 +1,330 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinod Krishna - AI Innovator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+header:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 0.5rem;
+}
+
+nav a {
+  color: #ff7f00;
+  text-decoration: none;
+  font-size: 1.125rem;  
+  text-shadow: 0 0 5px #ff7f00;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+main section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#about {  
+  background: linear-gradient(45deg, #00ffff, #000, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#about > div {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 3rem;
+  align-items: center;
+}
+
+#about img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00ffff;  
+}
+
+#about h2 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: #ff7f00;
+  text-shadow: 0 0 10px #ff7f00;
+}
+
+h4 {
+  font-size: 3rem;
+  margin: 5rem 50rem 1rem;
+  color: #ff7f00;
+  text-shadow: 0 0 10px #ff7f00;
+  animation: heading-in 0.8s ease forwards;
+}
+
+#about p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+p {
+  font-size: 1.25rem;
+  margin: 0 45rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+@media screen and (max-width: 800px) {
+  #about > div {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 4rem;  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(96,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='0.31' stop-color='%23fc6'/%3E%3Cstop offset='1' stop-color='%23F0F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='7.919999999999999'%3E%3Cpath transform='translate(-17.25 5.6) rotate(1.75 1409 581) scale(0.9988069999999999)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='2.64' transform='translate(-29.75 22) rotate(6.3 800 450) scale(1.00792)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(13.299999999999999 -36) rotate(42 401 736) scale(1.00792)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23a)' stroke-width='2.4'%3E%3Cpath transform='translate(72 -5.6) rotate(1.05 150 345) scale(0.9935640000000001)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='5.28' transform='translate(-54 -68.5) rotate(43.2 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-86.4 34) rotate(7.2 1400 132) scale(0.865)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  perspective: 1000px;
+}
+
+.portfolio-item {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-aiitem {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.5s;
+  
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05) rotateX(10deg) rotateY(20deg);
+  z-index: 1;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.item-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  transition: bottom 0.5s;
+}
+
+.portfolio-item:hover .item-info {
+  bottom: 0;
+}
+
+.item-info h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.item-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio {
+    grid-template-columns: 1fr;
+  }
+}
+
+button {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: none;
+  color: #140101;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  margin-top: 1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);  
+}
+
+#videobg {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: saturate(3) hue-rotate(-45deg);
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+<video autoplay muted loop playsinline id="videobg">
+  <source src="https://www.dropbox.com/s/2wgtwj6sehh30q4/tetris3.mp4?raw=1" type="video/mp4">
+</video>
+
+<header>
+  <h1>Vino Krishna</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>      
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>  
+</header>
+
+<main>
+  <section id="about">
+    <div>
+      <div>
+        <h2>AI Innovator</h2>
+        <p>Hi, I'm Vinod Krishna, a 19-year-old innovator specializing in AI filmmaking, AI art, ComfyUI and coding. I'm passionate about pushing the boundaries of what's possible with artificial intelligence in creative fields.</p>
+        <button><a href="portfolio.html">PORTFOLIO</a></button>
+      </div>
+      <img src="file:///D:/Downloads/website/profile%20picture.png" alt="Vino Krishna headshot" width="500" height="500">
+    </div>
+  </section>
+
+  <div>
+    <h4>My Works</h4>
+    <p>
+      please click portfolio button to see my full works
+    </p>
+  </div>
+  
+  <section id="portfolio">
+    
+    <div class="portfolio-item">
+      <a href="https://ibb.co/B3wmZNG"><img src="https://i.ibb.co/3dkwNzv/Comfy-UI-00200.png" alt="Comfy-UI-00200" border="0"></a>
+      <div class="item-info">
+        <h3>Ai Art</h3>
+        <p>various ai arts with open source models.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">  
+      <a href="https://ibb.co/Lnq03mK"><img src="https://i.ibb.co/r4LQVY9/Comfy-UI-00257.png" alt="Comfy-UI-00257" border="0"></a>
+      <div class="item-info">
+        <h3>Cartoon Art</h3>
+        <p>creating some my own cartoon.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://ibb.co/wrNnwQ3"><img src="https://i.ibb.co/dJ0NLp1/lilly.png" alt="lilly" border="0"></a>
+      <div class="item-info">  
+        <h3>AI Filmmaking</h3>
+        <p>Experimental short films incorporating AI-generated visuals and narratives.</p>
+      </div>
+    </div>
+    
+    </div>
+  </section>
+
+
+</main>
+</body>
+</html>
